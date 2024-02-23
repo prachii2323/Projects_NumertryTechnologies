@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>About Us</title>
+</head>
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #dbe7e6;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+header {
+    background-color: #333;
+    color: #080707;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #555;
+    padding: 10px;
+}
+
+nav a {
+    color: #0b0a0a;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #777;
+}
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    color:black;
+}
+
+.toggle-button {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.additional-info {
+    display: none;
+    padding: 20px;
+    background-color: #f2f2f2;
+    color: black;
+}
+
+</style>
+<body>
+<div class="overlay">
+    <div class="about-section">
+        <h2>ABOUT US</h2> 
+        <p>Welcome to our tourism website! We are passionate about providing memorable travel experiences...</p>
+        <p>Tourism holds significant importance for individuals on both personal and societal levels. On a personal level, engaging in tourism provides individuals with unique opportunities for relaxation, exploration, and personal growth. Traveling to different destinations allows people to break away from their routine, experience new cultures, and gain a broader perspective on the world.</p>
+
+<p>Moreover, tourism plays a crucial role in the economic development of regions and countries. The travel industry generates employment opportunities, stimulates local businesses, and encourages the preservation of cultural heritage. Popular tourist destinations often experience infrastructure development, leading to improved living standards for local residents.</p>
+
+
+        <button class="toggle-button" onclick="toggleInfo()">Read More</button>
+
+        <div class="additional-info" id="additionalInfo">
+            <p>Our team is dedicated to creating unique and exciting travel packages for every type of adventurer...</p>
+            <p>Discover the world with us and make your travel dreams a reality!</p>
+            <p>Tourism also contributes to the social and economic development of destinations. As individuals explore new places, they often interact with diverse communities, fostering cultural understanding and appreciation. This exchange of ideas and experiences promotes tolerance and mutual respect, contributing to a more interconnected and harmonious global society.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var additionalInfo = document.getElementById("additionalInfo");
+            additionalInfo.style.display = (additionalInfo.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

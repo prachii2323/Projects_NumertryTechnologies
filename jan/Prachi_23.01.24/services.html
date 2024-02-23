@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+<style>
+     body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: black;
+            background-color: #dbe7e6;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #555;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        .services-section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .service-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-details {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .service-details p {
+            color: #555;
+        }
+</style>
+</head>
+<body>
+    <div class="services-section">
+        <h2>OUR SERVICES</h2>
+
+        <div class="service-card" onclick="toggleServiceDetails('service1')">
+            <h3>Adventure Tours</h3>
+            <div class="service-details" id="service1">
+                <p>Embark on thrilling adventures with our guided tours to breathtaking landscapes and exciting activities.</p>
+                <p>Includes hiking, biking, and more!</p>
+            </div>
+        </div>
+
+        <div class="service-card" onclick="toggleServiceDetails('service2')">
+            <h3>Cultural Experiences</h3>
+            <div class="service-details" id="service2">
+                <p>Immerse yourself in diverse cultures and traditions through our curated cultural experiences and events.</p>
+                <p>Explore local festivals, cuisine, and history!</p>
+            </div>
+        </div>
+
+        <div class="service-card" onclick="toggleServiceDetails('service3')">
+            <h3>Relaxation Retreats</h3>
+            <div class="service-details" id="service3">
+                <p>Unwind and rejuvenate in serene environments. Our relaxation retreats offer a perfect escape from the hustle and bustle.</p>
+                <p>Includes spa treatments, yoga, and meditation.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleServiceDetails(serviceId) {
+            var serviceDetails = document.getElementById(serviceId);
+            serviceDetails.style.display = (serviceDetails.style.display === "none") ? "block" : "none";
+        }
+    </script>
+
+    <!-- Rest of your HTML content goes here -->
+
+</body>
+</html>

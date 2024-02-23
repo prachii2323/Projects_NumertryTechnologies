@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .featured-books {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .book {
+      max-width: 300px;
+      margin: 10px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .book img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .announcements {
+      margin-top: 20px;
+    }
+.credit{
+  font-size: 1rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  text-align: center;
+  color: var(--black);
+}
+
+.credit span{
+  color: rgb(228, 88, 170);
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Library Management System</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="book.html">Books</a>
+    <a href="about.html">Members</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <main>
+    <h2>Welcome to Our Library!</h2>
+
+    <section class="featured-books">
+      <div class="book">
+        <img src="images/book1.jpg" alt="Book 1">
+        <h3>How to stop worrying and start living</h3>
+        <p>Author: Dale Carnegie</p>
+      </div>
+
+      <div class="book">
+        <img src="images/book2.jpg" alt="Book 2">
+        <h3>The Two Towers</h3>
+        <p>Author: J.R.R.Tolkien</p>
+      </div>
+
+      <div class="book">
+        <img src="images/book3.jpg" alt="Book 3">
+        <h3>The Subtle Art of not giving a Fuck</h3>
+        <p>Author: Mark Manson</p>
+      </div>
+    </section>
+
+    <section class="announcements">
+      <h2>Announcements</h2>
+      <p>Check out our new arrivals and upcoming events. Stay tuned for exciting library programs!</p>
+    </section>
+  </main>
+ <footer>
+  <div class="credit">created by <span> prachi </span>| all rights are reserved!</div>
+ </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .catalog {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .book {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .book:hover {
+      transform: scale(1.05);
+    }
+
+    #addBookForm {
+      display: none;
+      text-align: center;
+      margin: 20px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    input, button {
+      margin: 10px;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="showCatalog()">Catalog</a>
+    <a href="#" onclick="showAddBookForm()">Add Book</a>
+  </nav>
+
+  <div id="catalog" class="catalog">
+    <h2>Library Catalog</h2>
+    <h3>Add your favourite books to your cart section.</h3>
+    <h4>1.Click on add book.</h4>
+    <h4>2.Add your favourite book with title and author</h4>
+    <h4>3.See your books to your catalog section.</h4>
+    <div class="book" onclick="showBookDetails('Book 1')">Book 1</div>
+    <div class="book" onclick="showBookDetails('Book 2')">Book 2</div>
+    <div class="book" onclick="showBookDetails('Book 3')">Book 3</div>
+  </div>
+
+  <div id="addBookForm">
+    <h2>Add New Book</h2>
+    <form onsubmit="addBook(); return false;">
+      <label for="bookTitle">Title:</label>
+      <input type="text" id="bookTitle" required>
+<br>
+      <label for="bookAuthor">Author:</label>
+      <input type="text" id="bookAuthor" required>
+
+      <button type="submit">Add Book</button>
+    </form>
+  </div>
+
+  <script>
+    function showCatalog() {
+      document.getElementById('catalog').style.display = 'block';
+      document.getElementById('addBookForm').style.display = 'none';
+    }
+
+    function showAddBookForm() {
+      document.getElementById('catalog').style.display = 'none';
+      document.getElementById('addBookForm').style.display = 'block';
+    }
+
+    function showBookDetails(bookTitle) {
+      alert('Details for ' + bookTitle);
+      // Implement more sophisticated functionality here if needed.
+    }
+
+    function addBook() {
+      var title = document.getElementById('bookTitle').value;
+      var author = document.getElementById('bookAuthor').value;
+
+      // Implement code to add the new book to your library (e.g., update a database, display on the page).
+      alert('Book added: ' + title + ' by ' + author);
+
+      // Reset the form
+      document.getElementById('bookTitle').value = '';
+      document.getElementById('bookAuthor').value = '';
+    }
+  </script>
+
+</body>
+</html>
